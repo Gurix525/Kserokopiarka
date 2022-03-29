@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DevicesGroup
 {
-    public interface IFax
+    public interface IFax : IDevice
     {
-
+        public void SendFax(in string adress);
     }
 }
