@@ -15,7 +15,7 @@ namespace DevicesGroup
             {
                 IDocument document = null;
                 Scan(out document);
-                Console.WriteLine(DateTime.Now.ToString() + " Fax to " + adress + ":" + document.GetFileName());
+                Console.WriteLine(DateTime.Now.ToString() + " Fax to " + adress + ": " + document.GetFileName());
             }
         }
     }

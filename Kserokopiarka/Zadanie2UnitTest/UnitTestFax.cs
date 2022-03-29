@@ -311,5 +311,19 @@ namespace Zadanie2UnitTests
             }
             Assert.AreEqual(currentConsoleOut, Console.Out);
         }
+
+        [TestMethod]
+        public void Fax_CounterWhenDeviceIsOff()
+        {
+            var fax = new MultifunctionalDevice();
+            fax.PowerOn();
+            fax.PowerOff();
+
+            fax.SendFax("123-456-7890");
+            fax.PowerOn();
+            fax.PowerOff();
+
+            Assert.IsTrue(fax.Counter == 2 && fax.FaxCounter == 0);
+        }
     }
 }
